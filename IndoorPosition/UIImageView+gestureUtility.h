@@ -9,10 +9,9 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, isAlign) {
-    alignLeft,
-    alignRight,
-    alignTop,
-    alignBottom,
+    alignHorizon,
+    alignVertical,
+    alignCorner,
 };
 
 typedef NS_ENUM(NSInteger, isScale) {

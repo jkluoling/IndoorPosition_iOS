@@ -24,21 +24,25 @@
 -(int)isAlignBounds:(CGPoint)translation
 {
     
-    CGFloat width,height,superWidth,superHeight;
+    CGFloat currX,currY,width,height,superWidth,superHeight;
     
+    currX=self.frame.origin.x;
+    currY=self.frame.origin.y   ;
     width = self.frame.size.width;
     height = self.frame.size.height;
     superWidth = self.superview.frame.size.width;
     superHeight = self.superview.frame.size.height;
 
-    if(self.frame.origin.x+width<superWidth&&translation.x<0)
-        return alignRight;
-    else if (self.frame.origin.x>0&&translation.x>0)
-        return alignLeft;
-    else if (self.frame.origin.y>66&&translation.y>0)
-        return alignTop;
-    else if (self.frame.origin.y+height<superHeight&&translation.y<0)
-        return alignBottom;
+
+    if((currX+width<superWidth&&translation.x<0)||(currX>0&&translation.x>0)){
+        if ((currY>66&&translation.y>0)||(currY+height<superHeight&&translation.y<0)) {
+            return alignCorner;
+        } else {
+            return alignHorizon;
+        }
+    }
+    else if ((currY>66&&translation.y>0)||(currY+height<superHeight&&translation.y<0))
+        return alignVertical;
     return -1;
 }
 

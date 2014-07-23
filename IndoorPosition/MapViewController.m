@@ -42,27 +42,20 @@
     
     [self adjustAnchorPointForGesture:sender];
     CGPoint translation = [sender translationInView:[sender.view superview]];
-    switch ([_mapView isAlignBounds:translation]) {
-        case alignRight:
-            NSLog(@"right");
-            [_mapView setCenter:CGPointMake([_mapView center].x, [_mapView center].y + translation.y)];
-            break;
-        case alignLeft:
-            NSLog(@"left");
-            [_mapView setCenter:CGPointMake([_mapView center].x, [_mapView center].y + translation.y)];
-            break;
-        case alignTop:
-            NSLog(@"top");
-            [_mapView setCenter:CGPointMake([_mapView center].x+translation.x, [_mapView center].y)];
-            break;
-        case alignBottom:
-            NSLog(@"bottom");
-            [_mapView setCenter:CGPointMake([_mapView center].x+translation.x, [_mapView center].y)];
-            break;
-        default:
-            [_mapView setCenter:CGPointMake([_mapView center].x + translation.x, [_mapView center].y + translation.y)];
-            NSLog(@"default");
+    int alignState = [_mapView isAlignBounds:translation];
+    
+    if (alignState == alignCorner) {
+        translation.x = translation.y =0;
+        NSLog(@"Corner");
+    } else if (alignState == alignHorizon){
+        translation.x = 0;
+        NSLog(@"Horizon");
+    } else if (alignState == alignVertical){
+        translation.y = 0;
+        NSLog(@"Vertical");
     }
+    
+    [_mapView setCenter:CGPointMake([_mapView center].x + translation.x, [_mapView center].y + translation.y)];
     [sender setTranslation:CGPointZero inView:[sender.view superview]];
 
 }
