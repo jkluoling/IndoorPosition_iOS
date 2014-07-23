@@ -7,7 +7,6 @@
 //
 
 #import "MapViewController.h"
-#import "MapView.h"
 #import "UIImageView+gestureUtility.h"
 
 @interface MapViewController ()
@@ -19,7 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [_mapView setImage:[UIImage imageNamed:@"Map_zhf"]];
+    [_mapView setImage:[UIImage imageNamed:@"Map_yc"]];
+    [_mapView sizeToFit];
+    
 }
 
 
@@ -38,28 +39,50 @@
 - (IBAction)panGesture:(UIPanGestureRecognizer *)sender {
     
     [self adjustAnchorPointForGesture:sender];
+    CGPoint translation = [sender translationInView:[sender.view superview]];
+//    NSLog(@"x:%f, y;%f",_mapView.frame.origin.x,_mapView.frame.origin.y);
     
-    if ([_mapView isOutofBoundsWithSuperView:sender.view]) {
-        _mapView.center = CGPointMake(0, 0);
-        return;
+    switch ([_mapView isAlignBounds:translation]) {
+        case alignRight:
+            NSLog(@"right");
+            [_mapView setCenter:CGPointMake([_mapView center].x, [_mapView center].y + translation.y)];
+            break;
+        case alignLeft:
+            NSLog(@"left");
+            [_mapView setCenter:CGPointMake([_mapView center].x, [_mapView center].y + translation.y)];
+            break;
+        case alignTop:
+            NSLog(@"top");
+            [_mapView setCenter:CGPointMake([_mapView center].x+translation.x, [_mapView center].y)];
+            break;
+        case alignBottom:
+            NSLog(@"bottom");
+            [_mapView setCenter:CGPointMake([_mapView center].x+translation.x, [_mapView center].y)];
+            break;
+        default:
+            [_mapView setCenter:CGPointMake([_mapView center].x + translation.x, [_mapView center].y + translation.y)];
+            NSLog(@"default");
     }
     
-    if ([sender state] == UIGestureRecognizerStateBegan || [sender state] == UIGestureRecognizerStateChanged) {
-        CGPoint translation = [sender translationInView:[sender.view superview]];
-        
-        [_mapView setCenter:CGPointMake([_mapView center].x + translation.x, [_mapView center].y + translation.y)];
-        [sender setTranslation:CGPointZero inView:[sender.view superview]];
-    }
+    
+    
+    
+    
+//    if (NO) {
+//        [_mapView setCenter:CGPointMake([_mapView center].x, [_mapView center].y + translation.y)];
+//    } else if ([sender state] == UIGestureRecognizerStateBegan || [sender state] == UIGestureRecognizerStateChanged) {
+//        [_mapView setCenter:CGPointMake([_mapView center].x + translation.x, [_mapView center].y + translation.y)];
+//        NSLog(@"x:%f, y;%f",translation.x,translation.y);
+//    }
+    
+    [sender setTranslation:CGPointZero inView:[sender.view superview]];
+
 }
 
 - (IBAction)pinchGesture:(UIPinchGestureRecognizer *)sender {
     
     [self adjustAnchorPointForGesture:sender];
     
-    if ([_mapView isOutofBoundsWithSuperView:sender.view]) {
-        _mapView.center = CGPointMake(0, 0);
-        return;
-    }
     
     if ([sender state] == UIGestureRecognizerStateBegan || [sender state] == UIGestureRecognizerStateChanged) {
         _mapView.transform = CGAffineTransformScale([_mapView transform], [sender scale], [sender scale]);

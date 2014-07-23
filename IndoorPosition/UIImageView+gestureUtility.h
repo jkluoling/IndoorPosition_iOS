@@ -8,8 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, isAlign) {
+    alignLeft,
+    alignRight,
+    alignTop,
+    alignBottom,
+};
+
+typedef NS_ENUM(NSInteger, isScale) {
+    tooSmall,
+    tooLarge,
+};
+
 @interface UIImageView (gestureUtility)
 
--(Boolean)isOutofBoundsWithSuperView:(UIView *)superView;
+-(int)isAlignBounds:(CGPoint)translation;
+-(int)isScaleFit:(CGFloat)scale;
 
 @end

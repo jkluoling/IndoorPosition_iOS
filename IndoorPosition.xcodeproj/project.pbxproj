@@ -23,7 +23,6 @@
 		C81A8DF5197E550A0074C18F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C81A8DF3197E550A0074C18F /* InfoPlist.strings */; };
 		C81A8DF7197E550A0074C18F /* IndoorPositionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A8DF6197E550A0074C18F /* IndoorPositionTests.m */; };
 		C81A8E02197E5E680074C18F /* MapListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A8E01197E5E680074C18F /* MapListTableViewController.m */; };
-		C81A8E06197E61C50074C18F /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A8E05197E61C50074C18F /* MapView.m */; };
 		C81A8E0A197F60100074C18F /* UIImageView+gestureUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A8E09197F60100074C18F /* UIImageView+gestureUtility.m */; };
 /* End PBXBuildFile section */
 
@@ -60,8 +59,6 @@
 		C81A8DF6197E550A0074C18F /* IndoorPositionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IndoorPositionTests.m; sourceTree = "<group>"; };
 		C81A8E00197E5E680074C18F /* MapListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapListTableViewController.h; sourceTree = "<group>"; };
 		C81A8E01197E5E680074C18F /* MapListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapListTableViewController.m; sourceTree = "<group>"; };
-		C81A8E04197E61C50074C18F /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapView.h; path = View/MapView.h; sourceTree = "<group>"; };
-		C81A8E05197E61C50074C18F /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapView.m; path = View/MapView.m; sourceTree = "<group>"; };
 		C81A8E08197F60100074C18F /* UIImageView+gestureUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+gestureUtility.h"; sourceTree = "<group>"; };
 		C81A8E09197F60100074C18F /* UIImageView+gestureUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+gestureUtility.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,8 +164,6 @@
 			children = (
 				C81A8DDA197E550A0074C18F /* Main_iPhone.storyboard */,
 				C81A8DDD197E550A0074C18F /* Main_iPad.storyboard */,
-				C81A8E04197E61C50074C18F /* MapView.h */,
-				C81A8E05197E61C50074C18F /* MapView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -289,7 +284,6 @@
 				C81A8DE2197E550A0074C18F /* MapViewController.m in Sources */,
 				C81A8DD9197E550A0074C18F /* AppDelegate.m in Sources */,
 				C81A8DD5197E550A0074C18F /* main.m in Sources */,
-				C81A8E06197E61C50074C18F /* MapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
