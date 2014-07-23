@@ -11,7 +11,6 @@
 @interface MapView : UIView <UIGestureRecognizerDelegate>
 
 
-@property (strong, nonatomic) IBOutlet UIImageView *mapImage;
 -(instancetype)initWithMapName:(NSString *)mapName;
 
 @end

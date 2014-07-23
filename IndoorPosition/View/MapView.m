@@ -26,8 +26,8 @@
     UIImage *map = [UIImage imageNamed:mapName];
     self = [super initWithFrame:CGRectMake(0, 0, map.size.width, map.size.height)];
     if (self) {
-        _mapImage = [[UIImageView alloc]initWithImage:map];
-        [self addSubview:_mapImage];
+//        _mapImage = [[UIImageView alloc]initWithImage:map];
+//        [self addSubview:_mapImage];
     }
     return self;
 }
