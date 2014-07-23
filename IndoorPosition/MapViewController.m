@@ -18,10 +18,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [_mapView setImage:[UIImage imageNamed:@"Map_yc"]];
-    [_mapView sizeToFit];
     
+    //initial the mapvView
+    [_mapView setMap:@"Map_yc"];
 }
+
+
 
 
 #pragma mark - Gesture
@@ -40,8 +42,6 @@
     
     [self adjustAnchorPointForGesture:sender];
     CGPoint translation = [sender translationInView:[sender.view superview]];
-//    NSLog(@"x:%f, y;%f",_mapView.frame.origin.x,_mapView.frame.origin.y);
-    
     switch ([_mapView isAlignBounds:translation]) {
         case alignRight:
             NSLog(@"right");
@@ -63,18 +63,6 @@
             [_mapView setCenter:CGPointMake([_mapView center].x + translation.x, [_mapView center].y + translation.y)];
             NSLog(@"default");
     }
-    
-    
-    
-    
-    
-//    if (NO) {
-//        [_mapView setCenter:CGPointMake([_mapView center].x, [_mapView center].y + translation.y)];
-//    } else if ([sender state] == UIGestureRecognizerStateBegan || [sender state] == UIGestureRecognizerStateChanged) {
-//        [_mapView setCenter:CGPointMake([_mapView center].x + translation.x, [_mapView center].y + translation.y)];
-//        NSLog(@"x:%f, y;%f",translation.x,translation.y);
-//    }
-    
     [sender setTranslation:CGPointZero inView:[sender.view superview]];
 
 }
@@ -82,8 +70,6 @@
 - (IBAction)pinchGesture:(UIPinchGestureRecognizer *)sender {
     
     [self adjustAnchorPointForGesture:sender];
-    
-    
     if ([sender state] == UIGestureRecognizerStateBegan || [sender state] == UIGestureRecognizerStateChanged) {
         _mapView.transform = CGAffineTransformScale([_mapView transform], [sender scale], [sender scale]);
         [sender setScale:1];

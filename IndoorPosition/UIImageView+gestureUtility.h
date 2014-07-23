@@ -22,6 +22,7 @@ typedef NS_ENUM(NSInteger, isScale) {
 
 @interface UIImageView (gestureUtility)
 
+-(void)setMap:(NSString *)mapName;
 -(int)isAlignBounds:(CGPoint)translation;
 -(int)isScaleFit:(CGFloat)scale;
 
