@@ -46,13 +46,10 @@
     
     if (alignState == alignCorner) {
         translation.x = translation.y =0;
-        NSLog(@"Corner");
     } else if (alignState == alignHorizon){
         translation.x = 0;
-        NSLog(@"Horizon");
     } else if (alignState == alignVertical){
         translation.y = 0;
-        NSLog(@"Vertical");
     }
     
     [_mapView setCenter:CGPointMake([_mapView center].x + translation.x, [_mapView center].y + translation.y)];
@@ -63,15 +60,16 @@
 - (IBAction)pinchGesture:(UIPinchGestureRecognizer *)sender {
     
     [self adjustAnchorPointForGesture:sender];
+    CGFloat scale = [sender scale];
     if ([sender state] == UIGestureRecognizerStateBegan || [sender state] == UIGestureRecognizerStateChanged) {
-        _mapView.transform = CGAffineTransformScale([_mapView transform], [sender scale], [sender scale]);
+        int scaleState = [_mapView isScaleFit:scale];
+        if (scaleState == tooLarge || scaleState == tooSmall) {
+            scale = 1;
+        }
+        _mapView.transform = CGAffineTransformScale([_mapView transform], scale, scale);
         [sender setScale:1];
     }
     
 }
-
-
-
-
 
 @end

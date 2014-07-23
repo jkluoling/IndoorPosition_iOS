@@ -34,21 +34,24 @@
     superHeight = self.superview.frame.size.height;
 
 
-    if((currX+width<superWidth&&translation.x<0)||(currX>0&&translation.x>0)){
-        if ((currY>66&&translation.y>0)||(currY+height<superHeight&&translation.y<0)) {
+    if((currX+width+100<superWidth&&translation.x<0)||(currX-100>0&&translation.x>0)){
+        if ((currY-100>66&&translation.y>0)||(currY+height+100<superHeight&&translation.y<0)) {
             return alignCorner;
         } else {
             return alignHorizon;
         }
     }
-    else if ((currY>66&&translation.y>0)||(currY+height<superHeight&&translation.y<0))
+    else if ((currY-100>66&&translation.y>0)||(currY+height+100<superHeight&&translation.y<0))
         return alignVertical;
     return -1;
 }
 
 -(int)isScaleFit:(CGFloat)scale
 {
-    return tooLarge;
+    if ((self.frame.size.width<=320 && scale < 1)||(self.frame.size.width>640 && scale >1 )) {
+        return tooSmall;
+    }
+    return -1;
 }
 
 @end
