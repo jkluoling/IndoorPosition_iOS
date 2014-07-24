@@ -9,9 +9,16 @@
 #import "MapViewController.h"
 #import "UIImageView+gestureUtility.h"
 
+
 @interface MapViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *mapView;
+@property (strong, nonatomic) CLBeaconRegion *beaconRegion;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 @end
+
+#pragma mark - Bluetooth const
+static NSString * const kUUID = @"d26d197e-4a1c-44ae-b504-dd7768870564";
+static float ycMajor = 0x1111;
 
 @implementation MapViewController
 
@@ -24,6 +31,25 @@
 }
 
 
+
+
+#pragma mark - Location
+
+-(void)initBeaconRegionWith:(CGFloat)major
+{
+    if (_beaconRegion) {
+        _beaconRegion = nil;
+    }
+    
+    NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:kUUID];
+    _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid major:major identifier:@"Tongji"];
+}
+
+
+-(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
+{
+    
+}
 
 
 #pragma mark - Gesture

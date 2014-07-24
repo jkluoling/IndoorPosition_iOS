@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface MapViewController : UIViewController <UIGestureRecognizerDelegate>
+@interface MapViewController : UIViewController <UIGestureRecognizerDelegate,CLLocationManagerDelegate>
 
 @end

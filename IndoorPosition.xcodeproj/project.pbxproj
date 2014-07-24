@@ -24,6 +24,8 @@
 		C81A8DF7197E550A0074C18F /* IndoorPositionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A8DF6197E550A0074C18F /* IndoorPositionTests.m */; };
 		C81A8E02197E5E680074C18F /* MapListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A8E01197E5E680074C18F /* MapListTableViewController.m */; };
 		C81A8E0A197F60100074C18F /* UIImageView+gestureUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A8E09197F60100074C18F /* UIImageView+gestureUtility.m */; };
+		C85A786D1980940B0060504E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C85A786C1980940B0060504E /* CoreBluetooth.framework */; };
+		C85A786F198094100060504E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C85A786E198094100060504E /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		C81A8E01197E5E680074C18F /* MapListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapListTableViewController.m; sourceTree = "<group>"; };
 		C81A8E08197F60100074C18F /* UIImageView+gestureUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+gestureUtility.h"; sourceTree = "<group>"; };
 		C81A8E09197F60100074C18F /* UIImageView+gestureUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+gestureUtility.m"; sourceTree = "<group>"; };
+		C85A786C1980940B0060504E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		C85A786E198094100060504E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C85A786F198094100060504E /* CoreLocation.framework in Frameworks */,
+				C85A786D1980940B0060504E /* CoreBluetooth.framework in Frameworks */,
 				C81A8DCB197E550A0074C18F /* CoreGraphics.framework in Frameworks */,
 				C81A8DCD197E550A0074C18F /* UIKit.framework in Frameworks */,
 				C81A8DC9197E550A0074C18F /* Foundation.framework in Frameworks */,
@@ -109,6 +115,8 @@
 		C81A8DC7197E550A0074C18F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C85A786E198094100060504E /* CoreLocation.framework */,
+				C85A786C1980940B0060504E /* CoreBluetooth.framework */,
 				C81A8DC8197E550A0074C18F /* Foundation.framework */,
 				C81A8DCA197E550A0074C18F /* CoreGraphics.framework */,
 				C81A8DCC197E550A0074C18F /* UIKit.framework */,
