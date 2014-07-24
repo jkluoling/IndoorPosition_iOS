@@ -35,12 +35,25 @@ static float ycMajor = 0x1111;
 
 #pragma mark - Location
 
--(void)initBeaconRegionWith:(CGFloat)major
+-(void)startLocationWithMajor:(CGFloat)major
+{
+    [self initBeaconRegionWithMajor:major];
+    _locationManager = [[CLLocationManager alloc]init];
+    _locationManager.delegate=self;
+    [_locationManager startRangingBeaconsInRegion:_beaconRegion];
+}
+
+-(void)stopLocation
+{
+    [_locationManager stopMonitoringForRegion:_beaconRegion];
+    _locationManager = nil;
+}
+
+-(void)initBeaconRegionWithMajor:(CGFloat)major
 {
     if (_beaconRegion) {
         _beaconRegion = nil;
     }
-    
     NSUUID *uuid = [[NSUUID alloc]initWithUUIDString:kUUID];
     _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid major:major identifier:@"Tongji"];
 }
