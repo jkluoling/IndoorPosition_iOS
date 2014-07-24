@@ -26,6 +26,7 @@
 		C81A8E0A197F60100074C18F /* UIImageView+gestureUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A8E09197F60100074C18F /* UIImageView+gestureUtility.m */; };
 		C85A786D1980940B0060504E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C85A786C1980940B0060504E /* CoreBluetooth.framework */; };
 		C85A786F198094100060504E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C85A786E198094100060504E /* CoreLocation.framework */; };
+		C85A787219809D1F0060504E /* MapData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C85A787019809D1F0060504E /* MapData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		C81A8E09197F60100074C18F /* UIImageView+gestureUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+gestureUtility.m"; sourceTree = "<group>"; };
 		C85A786C1980940B0060504E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		C85A786E198094100060504E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C85A787119809D1F0060504E /* MapData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MapData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				C81A8E07197E62CE0074C18F /* Controller */,
 				C81A8E03197E619C0074C18F /* View */,
+				C85A787319809D250060504E /* Model */,
 				C81A8DE3197E550A0074C18F /* Images.xcassets */,
 				C81A8DCF197E550A0074C18F /* Supporting Files */,
 			);
@@ -187,6 +190,14 @@
 				C81A8DE1197E550A0074C18F /* MapViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		C85A787319809D250060504E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C85A787019809D1F0060504E /* MapData.xcdatamodeld */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +300,7 @@
 			files = (
 				C81A8E02197E5E680074C18F /* MapListTableViewController.m in Sources */,
 				C81A8E0A197F60100074C18F /* UIImageView+gestureUtility.m in Sources */,
+				C85A787219809D1F0060504E /* MapData.xcdatamodeld in Sources */,
 				C81A8DE2197E550A0074C18F /* MapViewController.m in Sources */,
 				C81A8DD9197E550A0074C18F /* AppDelegate.m in Sources */,
 				C81A8DD5197E550A0074C18F /* main.m in Sources */,
@@ -518,6 +530,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C85A787019809D1F0060504E /* MapData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C85A787119809D1F0060504E /* MapData.xcdatamodel */,
+			);
+			currentVersion = C85A787119809D1F0060504E /* MapData.xcdatamodel */;
+			name = MapData.xcdatamodeld;
+			path = Model/MapData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C81A8DBD197E550A0074C18F /* Project object */;
 }
