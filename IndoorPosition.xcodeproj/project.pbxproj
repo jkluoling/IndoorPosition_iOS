@@ -27,6 +27,10 @@
 		C85A786D1980940B0060504E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C85A786C1980940B0060504E /* CoreBluetooth.framework */; };
 		C85A786F198094100060504E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C85A786E198094100060504E /* CoreLocation.framework */; };
 		C85A787219809D1F0060504E /* MapData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C85A787019809D1F0060504E /* MapData.xcdatamodeld */; };
+		C85A78761980A38A0060504E /* AddMapInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C85A78751980A38A0060504E /* AddMapInfoViewController.m */; };
+		C85A78791980AE380060504E /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = C85A78781980AE380060504E /* Map.m */; };
+		C85A787C1980AE390060504E /* Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = C85A787B1980AE390060504E /* Coordinate.m */; };
+		C85A787E1980BE6A0060504E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C85A787D1980BE6A0060504E /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,13 @@
 		C85A786C1980940B0060504E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		C85A786E198094100060504E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C85A787119809D1F0060504E /* MapData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MapData.xcdatamodel; sourceTree = "<group>"; };
+		C85A78741980A38A0060504E /* AddMapInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMapInfoViewController.h; sourceTree = "<group>"; };
+		C85A78751980A38A0060504E /* AddMapInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMapInfoViewController.m; sourceTree = "<group>"; };
+		C85A78771980AE380060504E /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
+		C85A78781980AE380060504E /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Map.m; sourceTree = "<group>"; };
+		C85A787A1980AE390060504E /* Coordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coordinate.h; sourceTree = "<group>"; };
+		C85A787B1980AE390060504E /* Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coordinate.m; sourceTree = "<group>"; };
+		C85A787D1980BE6A0060504E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C85A787E1980BE6A0060504E /* CoreData.framework in Frameworks */,
 				C85A786F198094100060504E /* CoreLocation.framework in Frameworks */,
 				C85A786D1980940B0060504E /* CoreBluetooth.framework in Frameworks */,
 				C81A8DCB197E550A0074C18F /* CoreGraphics.framework in Frameworks */,
@@ -117,6 +129,7 @@
 		C81A8DC7197E550A0074C18F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C85A787D1980BE6A0060504E /* CoreData.framework */,
 				C85A786E198094100060504E /* CoreLocation.framework */,
 				C85A786C1980940B0060504E /* CoreBluetooth.framework */,
 				C81A8DC8197E550A0074C18F /* Foundation.framework */,
@@ -188,6 +201,8 @@
 				C81A8E01197E5E680074C18F /* MapListTableViewController.m */,
 				C81A8DE0197E550A0074C18F /* MapViewController.h */,
 				C81A8DE1197E550A0074C18F /* MapViewController.m */,
+				C85A78741980A38A0060504E /* AddMapInfoViewController.h */,
+				C85A78751980A38A0060504E /* AddMapInfoViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -196,6 +211,10 @@
 			isa = PBXGroup;
 			children = (
 				C85A787019809D1F0060504E /* MapData.xcdatamodeld */,
+				C85A787A1980AE390060504E /* Coordinate.h */,
+				C85A787B1980AE390060504E /* Coordinate.m */,
+				C85A78771980AE380060504E /* Map.h */,
+				C85A78781980AE380060504E /* Map.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -299,10 +318,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C81A8E02197E5E680074C18F /* MapListTableViewController.m in Sources */,
+				C85A787C1980AE390060504E /* Coordinate.m in Sources */,
 				C81A8E0A197F60100074C18F /* UIImageView+gestureUtility.m in Sources */,
 				C85A787219809D1F0060504E /* MapData.xcdatamodeld in Sources */,
+				C85A78761980A38A0060504E /* AddMapInfoViewController.m in Sources */,
 				C81A8DE2197E550A0074C18F /* MapViewController.m in Sources */,
 				C81A8DD9197E550A0074C18F /* AppDelegate.m in Sources */,
+				C85A78791980AE380060504E /* Map.m in Sources */,
 				C81A8DD5197E550A0074C18F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

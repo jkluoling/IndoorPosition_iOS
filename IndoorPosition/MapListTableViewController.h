@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Map.h"
+#import "Coordinate.h"
 
 @interface MapListTableViewController : UITableViewController
+
+@property NSMutableArray *maps;
+
+
+- (IBAction)unwindAddMap:(UIStoryboardSegue *)sender;
 
 @end
