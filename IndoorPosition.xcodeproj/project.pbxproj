@@ -31,6 +31,9 @@
 		C85A78791980AE380060504E /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = C85A78781980AE380060504E /* Map.m */; };
 		C85A787C1980AE390060504E /* Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = C85A787B1980AE390060504E /* Coordinate.m */; };
 		C85A787E1980BE6A0060504E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C85A787D1980BE6A0060504E /* CoreData.framework */; };
+		C8796DA119889F3C00805CD0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C8796DA019889F3C00805CD0 /* libsqlite3.dylib */; };
+		C8796DA319889FFB00805CD0 /* database_ParkDemo.db in Resources */ = {isa = PBXBuildFile; fileRef = C8796DA219889FFB00805CD0 /* database_ParkDemo.db */; };
+		C8796DA61988A95A00805CD0 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8796DA51988A95A00805CD0 /* DBManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,10 @@
 		C85A787A1980AE390060504E /* Coordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coordinate.h; sourceTree = "<group>"; };
 		C85A787B1980AE390060504E /* Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coordinate.m; sourceTree = "<group>"; };
 		C85A787D1980BE6A0060504E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C8796DA019889F3C00805CD0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		C8796DA219889FFB00805CD0 /* database_ParkDemo.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = database_ParkDemo.db; sourceTree = "<group>"; };
+		C8796DA41988A95A00805CD0 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		C8796DA51988A95A00805CD0 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8796DA119889F3C00805CD0 /* libsqlite3.dylib in Frameworks */,
 				C85A787E1980BE6A0060504E /* CoreData.framework in Frameworks */,
 				C85A786F198094100060504E /* CoreLocation.framework in Frameworks */,
 				C85A786D1980940B0060504E /* CoreBluetooth.framework in Frameworks */,
@@ -110,6 +118,7 @@
 		C81A8DBC197E550A0074C18F = {
 			isa = PBXGroup;
 			children = (
+				C8796DA219889FFB00805CD0 /* database_ParkDemo.db */,
 				C81A8DCE197E550A0074C18F /* IndoorPosition */,
 				C81A8DF0197E550A0074C18F /* IndoorPositionTests */,
 				C81A8DC7197E550A0074C18F /* Frameworks */,
@@ -129,6 +138,7 @@
 		C81A8DC7197E550A0074C18F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C8796DA019889F3C00805CD0 /* libsqlite3.dylib */,
 				C85A787D1980BE6A0060504E /* CoreData.framework */,
 				C85A786E198094100060504E /* CoreLocation.framework */,
 				C85A786C1980940B0060504E /* CoreBluetooth.framework */,
@@ -210,6 +220,8 @@
 		C85A787319809D250060504E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C8796DA41988A95A00805CD0 /* DBManager.h */,
+				C8796DA51988A95A00805CD0 /* DBManager.m */,
 				C85A787019809D1F0060504E /* MapData.xcdatamodeld */,
 				C85A787A1980AE390060504E /* Coordinate.h */,
 				C85A787B1980AE390060504E /* Coordinate.m */,
@@ -298,6 +310,7 @@
 				C81A8DDF197E550A0074C18F /* Main_iPad.storyboard in Resources */,
 				C81A8DE4197E550A0074C18F /* Images.xcassets in Resources */,
 				C81A8DDC197E550A0074C18F /* Main_iPhone.storyboard in Resources */,
+				C8796DA319889FFB00805CD0 /* database_ParkDemo.db in Resources */,
 				C81A8DD3197E550A0074C18F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +339,7 @@
 				C81A8DD9197E550A0074C18F /* AppDelegate.m in Sources */,
 				C85A78791980AE380060504E /* Map.m in Sources */,
 				C81A8DD5197E550A0074C18F /* main.m in Sources */,
+				C8796DA61988A95A00805CD0 /* DBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
