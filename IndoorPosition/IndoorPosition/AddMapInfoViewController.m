@@ -68,7 +68,7 @@
 {
     [super viewDidLoad];
     
-    _dbManager = [[DBManager alloc]initWithDatabaseFilename:@"test.sql"];
+    _dbManager = [[DBManager alloc]initWithDatabaseFilename:@"database_ParkDemo.db"];
 }
 
 - (void)didReceiveMemoryWarning

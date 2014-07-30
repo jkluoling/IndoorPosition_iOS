@@ -10,7 +10,7 @@
 #import "Map.h"
 #import "Coordinate.h"
 
-@interface MapListTableViewController : UITableViewController
+@interface MapListTableViewController : UITableViewController <UITableViewDataSource,UITableViewDelegate>
 
 @property NSMutableArray *maps;
 
