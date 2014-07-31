@@ -33,19 +33,6 @@
     return context;
 }
 
-
-#pragma mark - sqlite
--(void)loadData
-{
-    NSString *query = @"select * from DESTINATION";
-    
-    if (_testInfo != nil) {
-        _testInfo = nil;
-    }
-    
-    _testInfo = [[NSArray alloc] initWithArray:[_dbManager loadDataFromDB:query]];
-}
-
 #pragma mark - segue
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -75,7 +62,7 @@
 {
     [super viewDidLoad];
     
-    _dbManager = [[DBManager alloc]initWithDatabaseFilename:@"M.sqlite"];
+    _dbManager = [[DBManager alloc]initWithDatabaseFilename:@"jdpark.db"];
 }
 
 - (void)didReceiveMemoryWarning

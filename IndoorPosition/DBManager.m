@@ -81,7 +81,7 @@
     _arrColumnNames = [[NSMutableArray alloc] init];
     
     //open database
-    BOOL openDatabaseResult = sqlite3_open([databasePath UTF8String], &sqlite3Database);
+    int openDatabaseResult = sqlite3_open([databasePath UTF8String], &sqlite3Database);
     if (openDatabaseResult == SQLITE_OK) {
         sqlite3_stmt *compliedStatement;
     

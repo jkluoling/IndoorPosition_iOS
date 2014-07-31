@@ -18,7 +18,7 @@
 
 #pragma mark - Bluetooth const
 static NSString * const kUUID = @"d26d197e-4a1c-44ae-b504-dd7768870564";
-static float ycMajor = 0x1111;
+//static float ycMajor = 0x1111;
 
 @implementation MapViewController
 
