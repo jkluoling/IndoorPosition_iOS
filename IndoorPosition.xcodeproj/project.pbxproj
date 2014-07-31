@@ -34,6 +34,8 @@
 		C8796DA119889F3C00805CD0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C8796DA019889F3C00805CD0 /* libsqlite3.dylib */; };
 		C8796DA61988A95A00805CD0 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8796DA51988A95A00805CD0 /* DBManager.m */; };
 		C8796DAC19892B9800805CD0 /* test.sql in Resources */ = {isa = PBXBuildFile; fileRef = C8796DAB19892B9800805CD0 /* test.sql */; };
+		C8796DAE198A046500805CD0 /* M.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = C8796DAD198A046500805CD0 /* M.sqlite */; };
+		C8796DB0198A196400805CD0 /* jdpark.db in Resources */ = {isa = PBXBuildFile; fileRef = C8796DAF198A196400805CD0 /* jdpark.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		C8796DA41988A95A00805CD0 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		C8796DA51988A95A00805CD0 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		C8796DAB19892B9800805CD0 /* test.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.sql; sourceTree = "<group>"; };
+		C8796DAD198A046500805CD0 /* M.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = M.sqlite; sourceTree = "<group>"; };
+		C8796DAF198A196400805CD0 /* jdpark.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = jdpark.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +223,8 @@
 		C85A787319809D250060504E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C8796DAF198A196400805CD0 /* jdpark.db */,
+				C8796DAD198A046500805CD0 /* M.sqlite */,
 				C8796DAB19892B9800805CD0 /* test.sql */,
 				C8796DA41988A95A00805CD0 /* DBManager.h */,
 				C8796DA51988A95A00805CD0 /* DBManager.m */,
@@ -312,6 +318,8 @@
 				C8796DAC19892B9800805CD0 /* test.sql in Resources */,
 				C81A8DDC197E550A0074C18F /* Main_iPhone.storyboard in Resources */,
 				C81A8DD3197E550A0074C18F /* InfoPlist.strings in Resources */,
+				C8796DB0198A196400805CD0 /* jdpark.db in Resources */,
+				C8796DAE198A046500805CD0 /* M.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

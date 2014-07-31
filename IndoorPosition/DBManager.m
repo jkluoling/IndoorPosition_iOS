@@ -23,7 +23,7 @@
 {
     self = [super init];
     if (self) {
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
         
         _documentsDirectory = [paths objectAtIndex:0];
         

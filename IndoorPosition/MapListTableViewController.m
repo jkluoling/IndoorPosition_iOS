@@ -10,9 +10,28 @@
 
 @interface MapListTableViewController ()
 
+@property (nonatomic, strong) DBManager *dbManager;
+@property (nonatomic, strong) NSArray *testInfo;
+
 @end
 
 @implementation MapListTableViewController
+
+-(void)loadData
+{
+    NSString *query = @"select * from wifi_Average_Data";
+    
+    if (_testInfo != nil) {
+        _testInfo = nil;
+    }
+    
+    _testInfo = [[NSArray alloc] initWithArray:[_dbManager loadDataFromDB:query]];
+}
+
+
+
+
+#pragma mark - table view
 
 -(IBAction)unwindAddMap:(UIStoryboardSegue *)sender
 {
@@ -34,11 +53,11 @@
     [super viewDidLoad];
 
     _maps = [[NSMutableArray alloc] init];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    _dbManager = [[DBManager alloc] initWithDatabaseFilename:@"jdpark.db"];
+    
+    [self loadData];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,25 +71,35 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
+    return _testInfo.count;
 }
 
-/*
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MapListCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    NSInteger indexOfDestName = [_dbManager.arrColumnNames indexOfObject:@"ssid"];
+    NSInteger indexOfDestId = [_dbManager.arrColumnNames indexOfObject:@"mac"];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", [[_testInfo objectAtIndex:indexPath.row] objectAtIndex:indexOfDestName]];
+    
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [[_testInfo objectAtIndex:indexPath.row] objectAtIndex:indexOfDestId]];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

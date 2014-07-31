@@ -11,6 +11,7 @@
 @interface AddMapInfoViewController ()
 
 @property (nonatomic, strong) DBManager *dbManager;
+@property (nonatomic, strong) NSArray *testInfo;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
@@ -32,6 +33,19 @@
     return context;
 }
 
+
+#pragma mark - sqlite
+-(void)loadData
+{
+    NSString *query = @"select * from DESTINATION";
+    
+    if (_testInfo != nil) {
+        _testInfo = nil;
+    }
+    
+    _testInfo = [[NSArray alloc] initWithArray:[_dbManager loadDataFromDB:query]];
+}
+
 #pragma mark - segue
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -44,13 +58,6 @@
     if (self.mapName.text.length > 0 && self.major.text.length >0) {
         
         return;
-//        NSManagedObjectContext *context = [self managedObjectContext];
-//        NSManagedObject *newMap = [NSEntityDescription insertNewObjectForEntityForName:@"Map"
-//                                                                inManagedObjectContext:context];
-//        [newMap setValue:self.mapName.text forKey:@"name"];
-//        
-//        [newMap setValue:[[NSNumber alloc]initWithFloat:[self.major.text floatValue]]
-//                    forKey:@"major"];
     }
     
 }
@@ -68,7 +75,7 @@
 {
     [super viewDidLoad];
     
-    _dbManager = [[DBManager alloc]initWithDatabaseFilename:@"test.sql"];
+    _dbManager = [[DBManager alloc]initWithDatabaseFilename:@"M.sqlite"];
 }
 
 - (void)didReceiveMemoryWarning
