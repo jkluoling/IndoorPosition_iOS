@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Map.h"
-#import "Coordinate.h"
 #import "DBManager.h"
 
 @interface MapListTableViewController : UITableViewController <UITableViewDataSource,UITableViewDelegate>
