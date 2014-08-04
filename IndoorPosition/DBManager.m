@@ -24,8 +24,11 @@
     self = [super init];
     if (self) {
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+
         
         _documentsDirectory = [paths objectAtIndex:0];
+        
+//        _documentsDirectory = [_documentsDirectory stringByAppendingString:@"/MapDatabase/"];
         
         _databaseFilename = dbFilename;
         

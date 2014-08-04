@@ -15,7 +15,4 @@
 
 @property NSMutableArray *maps;
 
-
-- (IBAction)unwindAddMap:(UIStoryboardSegue *)sender;
-
 @end

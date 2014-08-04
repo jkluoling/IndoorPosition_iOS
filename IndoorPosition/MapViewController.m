@@ -31,8 +31,6 @@ static NSString * const kUUID = @"d26d197e-4a1c-44ae-b504-dd7768870564";
 }
 
 
-
-
 #pragma mark - Location
 
 -(void)startLocationWithMajor:(CGFloat)major
