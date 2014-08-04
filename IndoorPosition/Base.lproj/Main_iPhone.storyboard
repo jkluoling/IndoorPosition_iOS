@@ -91,64 +91,11 @@
                             <outlet property="delegate" destination="U3S-4p-VRo" id="SSm-yP-NyB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="室内图列表" id="pgc-Us-URd">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zMp-F2-uLH">
-                            <connections>
-                                <segue destination="rTQ-di-rzi" kind="push" identifier="" id="GQy-iY-Jeq"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="室内图列表" id="pgc-Us-URd"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4X7-87-xo3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1453" y="138"/>
-        </scene>
-        <!--Add Map Info View Controller-->
-        <scene sceneID="hSz-l6-c5G">
-            <objects>
-                <viewController id="rTQ-di-rzi" userLabel="Add Map Info View Controller" customClass="AddMapInfoViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Av8-xu-hOK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MapName" textAlignment="center" minimumFontSize="17" id="ek6-Y4-lU3">
-                                <rect key="frame" x="20" y="179" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Major" textAlignment="center" minimumFontSize="17" id="kuM-jD-q2T">
-                                <rect key="frame" x="20" y="269" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="DMe-tZ-KP6">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2Wj-iX-2Br">
-                            <connections>
-                                <segue destination="x8a-Wy-ynv" kind="unwind" unwindAction="unwindAddMap:" id="jdp-pr-fK2"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ykF-Ih-gi7">
-                            <connections>
-                                <segue destination="x8a-Wy-ynv" kind="unwind" unwindAction="unwindAddMap:" id="Id2-tM-ou6"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="major" destination="kuM-jD-q2T" id="bdI-T3-JWx"/>
-                        <outlet property="mapName" destination="ek6-Y4-lU3" id="eaA-aN-ghw"/>
-                        <outlet property="saveButton" destination="ykF-Ih-gi7" id="GKg-aS-bTH"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jc2-tS-f3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="x8a-Wy-ynv" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1995" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="287-zF-Aly">
