@@ -32,14 +32,14 @@
     height = self.frame.size.height;
     superWidth = self.superview.frame.size.width;
     superHeight = self.superview.frame.size.height;
-
+   
     //Horizon boundary
     if((currX+width+100<superWidth&&translation.x<0)||(currX-100>0&&translation.x>0)){
         //if also Vertical boundary, then align corner
         if ((currY-100>66&&translation.y>0)||(currY+height+100<superHeight&&translation.y<0)) {
             return alignCorner;
         } else {
-            return alignHorizon;
+            return alignHorizon; 
         }
     }
     //Vertical boundary

@@ -19,7 +19,7 @@
 
 -(void)loadData
 {
-    NSString *query = @"select * from wifi_Average_Data";
+    NSString *query = @"select * from MapWithLocation";
     
     if (_testInfo != nil) {
         _testInfo = nil;
@@ -48,7 +48,7 @@
 
     _maps = [[NSMutableArray alloc] init];
     
-    _dbManager = [[DBManager alloc] initWithDatabaseFilename:@"jdpark.db"];
+    _dbManager = [[DBManager alloc] initWithDatabaseFilename:@"sample.db"];
     
     [self loadData];
     
@@ -84,8 +84,8 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MapListCell" forIndexPath:indexPath];
     
-    NSInteger indexOfDestName = [_dbManager.arrColumnNames indexOfObject:@"ssid"];
-    NSInteger indexOfDestId = [_dbManager.arrColumnNames indexOfObject:@"mac"];
+    NSInteger indexOfDestName = [_dbManager.arrColumnNames indexOfObject:@"map"];
+    NSInteger indexOfDestId = [_dbManager.arrColumnNames indexOfObject:@"major"];
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@", [[_testInfo objectAtIndex:indexPath.row] objectAtIndex:indexOfDestName]];
     

@@ -91,7 +91,7 @@ static NSString * const kUUID = @"d26d197e-4a1c-44ae-b504-dd7768870564";
     
     [_mapView setCenter:CGPointMake([_mapView center].x + translation.x, [_mapView center].y + translation.y)];
     [sender setTranslation:CGPointZero inView:[sender.view superview]];
-
+     
 }
 
 - (IBAction)pinchGesture:(UIPinchGestureRecognizer *)sender {
