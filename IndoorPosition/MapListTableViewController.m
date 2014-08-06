@@ -19,7 +19,7 @@
 
 -(void)loadData
 {
-    NSString *query = @"select * from MapWithLocation";
+    NSString *query = @"select *,count(distinct map) from MapWithLocation group by map";
     
     if (_testInfo != nil) {
         _testInfo = nil;
