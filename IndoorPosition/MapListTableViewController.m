@@ -19,7 +19,7 @@
 
 -(void)loadData
 {
-    NSString *query = @"select *,count(distinct map) from MapWithLocation group by map";
+    NSString *query = @"SELECT DISTINCT map FROM MapWithLocation";
     
     if (_testInfo != nil) {
         _testInfo = nil;
@@ -85,11 +85,11 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MapListCell" forIndexPath:indexPath];
     
     NSInteger indexOfDestName = [_dbManager.arrColumnNames indexOfObject:@"map"];
-    NSInteger indexOfDestId = [_dbManager.arrColumnNames indexOfObject:@"major"];
+//    NSInteger indexOfDestId = [_dbManager.arrColumnNames indexOfObject:@"major"];
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@", [[_testInfo objectAtIndex:indexPath.row] objectAtIndex:indexOfDestName]];
     
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [[_testInfo objectAtIndex:indexPath.row] objectAtIndex:indexOfDestId]];
+//    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [[_testInfo objectAtIndex:indexPath.row] objectAtIndex:indexOfDestId]];
     
     return cell;
 }
