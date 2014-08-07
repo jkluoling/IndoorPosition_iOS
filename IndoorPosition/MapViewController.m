@@ -8,7 +8,7 @@
 
 #import "MapViewController.h"
 #import "UIImageView+gestureUtility.h"
-
+#import "MapListTableViewController.h"
 
 @interface MapViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *mapView;
@@ -27,9 +27,17 @@ static NSString * const kUUID = @"d26d197e-4a1c-44ae-b504-dd7768870564";
     [super viewDidLoad];
     
     //initial the mapvView
-    [_mapView setMap:@"Map_yc"];
+    [_mapView setMap:@"map_yc"];
 }
 
+-(void)unwindMapList:(UIStoryboardSegue *)segue
+{
+    MapListTableViewController *source = [segue sourceViewController];
+    
+    [_mapView setMap:source.selectedMapName];
+    
+    NSLog(@"select cell");
+}
 
 #pragma mark - Location
 
@@ -61,6 +69,7 @@ static NSString * const kUUID = @"d26d197e-4a1c-44ae-b504-dd7768870564";
 {
     
 }
+
 
 
 #pragma mark - Gesture

@@ -13,5 +13,6 @@
 @interface MapListTableViewController : UITableViewController <UITableViewDataSource,UITableViewDelegate>
 
 @property NSMutableArray *maps;
+@property NSString *selectedMapName;
 
 @end

@@ -11,4 +11,6 @@
 
 @interface MapViewController : UIViewController <UIGestureRecognizerDelegate,CLLocationManagerDelegate>
 
+-(IBAction)unwindMapList:(UIStoryboardSegue *)segue;
+
 @end

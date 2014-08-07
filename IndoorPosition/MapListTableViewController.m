@@ -18,6 +18,15 @@
 
 #pragma mark - table view
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    _selectedMapName = [[_mapData.mapName objectAtIndex:indexPath.row]objectAtIndex:0];
+    NSLog(@"prepareForSegue");
+}
+
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
