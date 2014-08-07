@@ -30,7 +30,7 @@
 		C85A787E1980BE6A0060504E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C85A787D1980BE6A0060504E /* CoreData.framework */; };
 		C8796DA119889F3C00805CD0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C8796DA019889F3C00805CD0 /* libsqlite3.dylib */; };
 		C8796DA61988A95A00805CD0 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8796DA51988A95A00805CD0 /* DBManager.m */; };
-		C8796DB0198A196400805CD0 /* jdpark.db in Resources */ = {isa = PBXBuildFile; fileRef = C8796DAF198A196400805CD0 /* jdpark.db */; };
+		C8E5F6DD19934348008A21A6 /* MapData.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E5F6DC19934348008A21A6 /* MapData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +75,8 @@
 		C8796DA019889F3C00805CD0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		C8796DA41988A95A00805CD0 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		C8796DA51988A95A00805CD0 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
-		C8796DAF198A196400805CD0 /* jdpark.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = jdpark.db; sourceTree = "<group>"; };
+		C8E5F6DB19934348008A21A6 /* MapData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapData.h; sourceTree = "<group>"; };
+		C8E5F6DC19934348008A21A6 /* MapData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,7 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				C80996241990C181009791D6 /* sample.db */,
-				C8796DAF198A196400805CD0 /* jdpark.db */,
+				C8E5F6DB19934348008A21A6 /* MapData.h */,
+				C8E5F6DC19934348008A21A6 /* MapData.m */,
 				C8796DA41988A95A00805CD0 /* DBManager.h */,
 				C8796DA51988A95A00805CD0 /* DBManager.m */,
 			);
@@ -296,7 +298,6 @@
 				C81A8DE4197E550A0074C18F /* Images.xcassets in Resources */,
 				C81A8DDC197E550A0074C18F /* Main_iPhone.storyboard in Resources */,
 				C81A8DD3197E550A0074C18F /* InfoPlist.strings in Resources */,
-				C8796DB0198A196400805CD0 /* jdpark.db in Resources */,
 				C80996251990C181009791D6 /* sample.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8E5F6DD19934348008A21A6 /* MapData.m in Sources */,
 				C81A8E02197E5E680074C18F /* MapListTableViewController.m in Sources */,
 				C81A8E0A197F60100074C18F /* UIImageView+gestureUtility.m in Sources */,
 				C81A8DE2197E550A0074C18F /* MapViewController.m in Sources */,

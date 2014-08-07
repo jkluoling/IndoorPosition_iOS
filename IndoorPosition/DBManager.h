@@ -20,10 +20,6 @@
 
 -(instancetype)initWithDatabaseFilename:(NSString *)dbFilename;
 
--(void)copyDatabaseIntoDocumentsDirectory;
-
 -(NSArray *)loadDataFromDB:(NSString *)query;
-
--(void)excuteQuery:(NSString *)query;
 
 @end

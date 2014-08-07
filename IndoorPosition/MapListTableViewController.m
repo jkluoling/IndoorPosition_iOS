@@ -10,26 +10,11 @@
 
 @interface MapListTableViewController ()
 
-@property (nonatomic, strong) DBManager *dbManager;
-@property (nonatomic, strong) NSArray *testInfo;
+@property (nonatomic,strong) MapData *mapData;
 
 @end
 
 @implementation MapListTableViewController
-
--(void)loadData
-{
-    NSString *query = @"SELECT DISTINCT map FROM MapWithLocation";
-    
-    if (_testInfo != nil) {
-        _testInfo = nil;
-    }
-    
-    _testInfo = [[NSArray alloc] initWithArray:[_dbManager loadDataFromDB:query]];
-}
-
-
-
 
 #pragma mark - table view
 
@@ -48,10 +33,7 @@
 
     _maps = [[NSMutableArray alloc] init];
     
-    _dbManager = [[DBManager alloc] initWithDatabaseFilename:@"sample.db"];
-    
-    [self loadData];
-    
+    _mapData = [[MapData alloc]init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,7 +53,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return _testInfo.count;
+    return _mapData.mapName.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -84,13 +66,10 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MapListCell" forIndexPath:indexPath];
     
-    NSInteger indexOfDestName = [_dbManager.arrColumnNames indexOfObject:@"map"];
-//    NSInteger indexOfDestId = [_dbManager.arrColumnNames indexOfObject:@"major"];
+    NSString *mapName = [[_mapData.mapName objectAtIndex:indexPath.row] objectAtIndex:0];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", [[_testInfo objectAtIndex:indexPath.row] objectAtIndex:indexOfDestName]];
-    
-//    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [[_testInfo objectAtIndex:indexPath.row] objectAtIndex:indexOfDestId]];
-    
+    cell.textLabel.text = mapName;
+
     return cell;
 }
 
