@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C80996251990C181009791D6 /* sample.db in Resources */ = {isa = PBXBuildFile; fileRef = C80996241990C181009791D6 /* sample.db */; };
+		323F84F819949BA4009E392E /* sample.db in Resources */ = {isa = PBXBuildFile; fileRef = 323F84F719949BA4009E392E /* sample.db */; };
+		32DA2E1519961BF900B73DB0 /* PositionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DA2E1419961BF900B73DB0 /* PositionView.m */; };
+		32DA2E1719962A7700B73DB0 /* point.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DA2E1619962A7700B73DB0 /* point.png */; };
 		C81A8DC9197E550A0074C18F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81A8DC8197E550A0074C18F /* Foundation.framework */; };
 		C81A8DCB197E550A0074C18F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81A8DCA197E550A0074C18F /* CoreGraphics.framework */; };
 		C81A8DCD197E550A0074C18F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81A8DCC197E550A0074C18F /* UIKit.framework */; };
@@ -30,7 +32,6 @@
 		C85A787E1980BE6A0060504E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C85A787D1980BE6A0060504E /* CoreData.framework */; };
 		C8796DA119889F3C00805CD0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C8796DA019889F3C00805CD0 /* libsqlite3.dylib */; };
 		C8796DA61988A95A00805CD0 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8796DA51988A95A00805CD0 /* DBManager.m */; };
-		C89CACE119935F3C00E355F0 /* ycLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = C89CACE019935F3C00E355F0 /* ycLocation.m */; };
 		C8E5F6DD19934348008A21A6 /* MapData.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E5F6DC19934348008A21A6 /* MapData.m */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C80996241990C181009791D6 /* sample.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.db; sourceTree = "<group>"; };
+		323F84F719949BA4009E392E /* sample.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.db; sourceTree = "<group>"; };
+		32DA2E1319961BF900B73DB0 /* PositionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionView.h; sourceTree = "<group>"; };
+		32DA2E1419961BF900B73DB0 /* PositionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionView.m; sourceTree = "<group>"; };
+		32DA2E1619962A7700B73DB0 /* point.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = point.png; sourceTree = "<group>"; };
 		C81A8DC5197E550A0074C18F /* IndoorPosition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndoorPosition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C81A8DC8197E550A0074C18F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C81A8DCA197E550A0074C18F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -76,8 +80,6 @@
 		C8796DA019889F3C00805CD0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		C8796DA41988A95A00805CD0 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		C8796DA51988A95A00805CD0 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
-		C89CACDF19935F3C00E355F0 /* ycLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ycLocation.h; sourceTree = "<group>"; };
-		C89CACE019935F3C00E355F0 /* ycLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ycLocation.m; sourceTree = "<group>"; };
 		C8E5F6DB19934348008A21A6 /* MapData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapData.h; sourceTree = "<group>"; };
 		C8E5F6DC19934348008A21A6 /* MapData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,8 +149,6 @@
 		C81A8DCE197E550A0074C18F /* IndoorPosition */ = {
 			isa = PBXGroup;
 			children = (
-				C89CACDF19935F3C00E355F0 /* ycLocation.h */,
-				C89CACE019935F3C00E355F0 /* ycLocation.m */,
 				C81A8E07197E62CE0074C18F /* Controller */,
 				C81A8E03197E619C0074C18F /* View */,
 				C85A787319809D250060504E /* Model */,
@@ -207,6 +207,8 @@
 				C81A8E01197E5E680074C18F /* MapListTableViewController.m */,
 				C81A8DE0197E550A0074C18F /* MapViewController.h */,
 				C81A8DE1197E550A0074C18F /* MapViewController.m */,
+				32DA2E1319961BF900B73DB0 /* PositionView.h */,
+				32DA2E1419961BF900B73DB0 /* PositionView.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -214,9 +216,10 @@
 		C85A787319809D250060504E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C80996241990C181009791D6 /* sample.db */,
 				C8E5F6DB19934348008A21A6 /* MapData.h */,
+				32DA2E1619962A7700B73DB0 /* point.png */,
 				C8E5F6DC19934348008A21A6 /* MapData.m */,
+				323F84F719949BA4009E392E /* sample.db */,
 				C8796DA41988A95A00805CD0 /* DBManager.h */,
 				C8796DA51988A95A00805CD0 /* DBManager.m */,
 			);
@@ -301,9 +304,10 @@
 			files = (
 				C81A8DDF197E550A0074C18F /* Main_iPad.storyboard in Resources */,
 				C81A8DE4197E550A0074C18F /* Images.xcassets in Resources */,
+				32DA2E1719962A7700B73DB0 /* point.png in Resources */,
+				323F84F819949BA4009E392E /* sample.db in Resources */,
 				C81A8DDC197E550A0074C18F /* Main_iPhone.storyboard in Resources */,
 				C81A8DD3197E550A0074C18F /* InfoPlist.strings in Resources */,
-				C80996251990C181009791D6 /* sample.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,10 +327,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8E5F6DD19934348008A21A6 /* MapData.m in Sources */,
+				32DA2E1519961BF900B73DB0 /* PositionView.m in Sources */,
 				C81A8E02197E5E680074C18F /* MapListTableViewController.m in Sources */,
 				C81A8E0A197F60100074C18F /* UIImageView+gestureUtility.m in Sources */,
 				C81A8DE2197E550A0074C18F /* MapViewController.m in Sources */,
-				C89CACE119935F3C00E355F0 /* ycLocation.m in Sources */,
 				C81A8DD9197E550A0074C18F /* AppDelegate.m in Sources */,
 				C81A8DD5197E550A0074C18F /* main.m in Sources */,
 				C8796DA61988A95A00805CD0 /* DBManager.m in Sources */,

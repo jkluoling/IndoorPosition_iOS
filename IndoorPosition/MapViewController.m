@@ -9,9 +9,15 @@
 #import "MapViewController.h"
 #import "UIImageView+gestureUtility.h"
 #import "MapListTableViewController.h"
-
+#import "PositionView.h"
 @interface MapViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView *mapView;
+{
+
+    CGPoint location;
+    PositionView *positionview;
+
+}
+@property (strong, nonatomic) IBOutlet UIImageView *mapView;
 @property (strong, nonatomic) CLBeaconRegion *beaconRegion;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @end
@@ -27,7 +33,12 @@ static NSString * const kUUID = @"d26d197e-4a1c-44ae-b504-dd7768870564";
     [super viewDidLoad];
     
     //initial the mapvView
-    [_mapView setMap:@"map_yc"];
+    float x = 200;
+    float y = 200;
+    [_mapView setMap:@"Map_yc"];
+    positionview = [[PositionView alloc] initWithFrame:CGRectMake(x,y,50,50)];
+    [self.mapView addSubview:positionview];
+
 }
 
 -(void)unwindMapList:(UIStoryboardSegue *)segue
@@ -38,6 +49,8 @@ static NSString * const kUUID = @"d26d197e-4a1c-44ae-b504-dd7768870564";
     
     NSLog(@"select cell");
 }
+
+
 
 #pragma mark - Location
 

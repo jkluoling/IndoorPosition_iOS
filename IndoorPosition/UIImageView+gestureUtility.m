@@ -19,6 +19,7 @@
                             self.frame.origin.y+66+(502-mapImage.size.height*320/mapImage.size.width)/2,
                             320,
                             mapImage.size.height*320/mapImage.size.width);
+    
 }
 
 -(int)isAlignBounds:(CGPoint)translation
